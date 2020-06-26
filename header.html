@@ -1,0 +1,198 @@
+
+<div id="web_header" style="height: 100px;">
+    <!--Logo area-->
+    <div class="webTopTable" :style="'margin: ' + (55 * heightRate) +'px 0 0 0px;'">
+        <!-- <div style="width: 5%; height: 80px; float: right;margin: -2% 0% 0 0%;"  @mouseout="mv=false;showLan=false;">
+        <img style="width: 40%; cursor: pointer;" src="./images/common/lan.png" @click="changeLanShow();" @mouseenter="showLan=true;">
+        <div v-show="showLan == true || mv == true" @mouseenter="mv=true;">  
+        <div style="margin: 16% 0 0 20%;"><span style="font-size: 1.8rem; cursor: pointer;" @click="changeLang(true);">english</span></div>
+        <div style="margin: 16% 0 0 20%;"><span style="font-size: 1.8rem; cursor: pointer;" @click="changeLang(false);">chinese</span></div></div>
+        </div> -->
+
+        <div id="webTop" class="webTop" style="width: 100%; float: left">
+            <div id="corpTitle" class="" fontpatterntitle="false"
+                 :style="titleStyle" _linktype="0">
+                 <img src="images/one/logo-0.png" style="width: 80%; cursor: pointer;" onclick="jumpToPage('home.html')">
+                <!-- <h1 class="titleWrapper">
+                    <div class="newPrimaryTitle">-1.5% 0px 2-1.5% 0px 2% -30%;1.5% 0px 2% -30%; -30%;
+                        <img src="images/one/logo-0.png" style="width: 40%; cursor: pointer;" onclick="jumpToPage('home.html')">
+                    </div>
+                </h1> -->
+            </div>
+
+            <div id="language" :style="langStyle">
+                <img style="width: 40%; cursor: pointer;" src="./images/common/lan.png" @click="changeLanShow();">
+                <div v-show="showLan == true">  
+                <div style="margin: 16% 0 0 20%;"><span style="font-size: 1.8rem; cursor: pointer;" @click="changeLang(true);">english</span></div>
+                <div style="margin: 16% 0 0 20%;"><span style="font-size: 1.8rem; cursor: pointer;" @click="changeLang(false);">chinese</span></div></div>
+            </div>
+
+            <div id="navV2" class="nav" :style="navStyle">
+
+                <div class="itemContainer" style="width: 100%;">
+                    <div title="" id="nav-1" class="item itemCol2 itemIndex1" colid="2"
+                         onclick="jumpToPage('home.html');">
+                        <div class="itemCenter navItem"><a hidefocus="true" style="outline:none;"
+                                                           class="J_nav_item_link "
+                                                           onclick=";return false;">
+                            <span class="itemName0 J_nav_item_name" v-text="webVue.isEn ? 'Home' : '首页'"></span>
+                        </a></div>
+                    </div>
+                    <div class="itemSep"><span class=""></span></div>
+                    <div title="" id="nav-2" class="item itemCol101 itemIndex2" colid="101"
+                         onclick="jumpToPage('aboutUs.html');">
+                        <div class="itemCenter navItem"><a hidefocus="true" style="outline:none;"
+                                                           class="J_nav_item_link "
+                                                           onclick=";return false;"><span
+                                class="itemName0 J_nav_item_name" v-text="webVue.isEn ? 'About CAE' : '关于我们'"></span>
+                        </a></div>
+                    </div>
+                    <div class="itemSep"><span class=""></span></div>
+                    <div title="" id="nav-3" class="item itemCol103 itemIndex3" colid="103"
+                         onclick="jumpToPage('ourProject.html');">
+                        <div class="itemCenter navItem"><a hidefocus="true" style="outline:none;"
+                                                           class="J_nav_item_link "
+                                                           onclick=";return false;"><span
+                                class="itemName0 J_nav_item_name" v-text="webVue.isEn ? 'Our Project' : '主要项目'" ></span>
+                            </a></div>
+                    </div>
+                    <div class="itemSep"><span class=""></span></div>
+                    <div title="" id="nav-4" class="item itemCol104 itemIndex4" colid="104"
+                         onclick="jumpToPage('showCase.html');">
+                        <div class="itemCenter navItem"><a hidefocus="true" style="outline:none;"
+                                                           class="J_nav_item_link "
+                                                           onclick=";return false;"><span
+                                class="itemName0 J_nav_item_name" v-text="webVue.isEn ? 'Showcase' : '活动展示'"></span></a></div>
+                    </div>
+                    <div class="itemSep"><span class=""></span></div>
+                    <div title="" id="nav-5" class="item itemCol105 itemIndex5" colid="105"
+                         onclick="jumpToPage('joinUs.html');">
+                        <div class="itemCenter navItem"><a hidefocus="true" style="outline:none;"
+                                                           class="J_nav_item_link "
+                                                           onclick=";return false;"><span
+                                class="itemName0 J_nav_item_name" v-text="webVue.isEn ? 'Join Us' : '加入我们'"></span>
+                        </a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="webHeaderTable J_webHeaderTable" id="webHeaderTable">
+        <div id="webHeaderContent" class="J_webHeaderTable webHeaderTd fk-moduleZoneWrap web_header_td J_webHeaderTd">
+            <div id="fk-webHeaderZone"
+                 class="elemZone elemZoneModule J_moduleZone fk-webHeaderZone fk-moduleZone forms sideForms">
+                <div class="fk-moduleZoneBg fk-elemZoneBg J_zoneContentBg elemZoneBg"></div>
+            </div>
+
+            <div id="webHeader" class="webHeader">
+                <div class="headerTable">
+                    <div class="headerCusLeft"></div>
+                    <div class="headerCusMiddle">
+
+                        <div class="headerNav headerNavDefault">
+
+                        </div>
+                    </div>
+                    <div class="headerCusRight"></div>
+                </div>
+            </div>
+        </div>
+        <div id="webHeaderContentBg"
+             class="J_webHeaderTable webHeaderTd web_header_td J_webHeaderTd webHeaderContentBg"></div>
+    </div>
+</div>
+
+<script>
+    new Vue({
+        el: '#web_header',
+        data() {
+            return {
+                widthRate: document.body.clientWidth / 1349,
+                heightRate: window.screen.availHeight / 728,
+                isPc: os.isPc,
+                titleStyle: {},
+                navStyle: {},
+                langStyle: {},
+                showLan: false,
+                mv: false
+            }
+        },
+        methods: {
+            changeLanShow() {
+                this.showLan = !this.showLan;
+            },
+            getData() {
+                if (this.isPc){
+                    this.titleStyle = {
+                        margin: '-5% 0 0 3%',
+                        width: '15%',
+                        textAlign: 'center'
+                    }
+                    this.navStyle = {
+                        width: '80%',
+                        margin: '-1.5% 0 2% 0'
+                        //top: '0px',
+                        //left: (430 * this.widthRate) + 'px'
+                    }
+                    this.langStyle = {
+                        float: 'right',
+                        width: '5%',
+                        margin: '-9% 3% 0 0',
+                        cursor: 'pointer',
+                        //position: 'fixed',
+                        // display: 'block',
+                        // zIndex: '31',
+                        // top: '7%',
+                        // right: '-2%',
+                    }
+                } else {
+                    this.titleStyle = {
+                        margin: '-2% 0 0 3%',
+                        width: '15%',
+                        textAlign: 'center'
+                    }
+                    this.navStyle = {
+                        width: '80%',
+                        margin: '-1.5% 0 2% -30%'
+                        //top: '16px',
+                        //left: (400 * this.widthRate) + 'px',
+                        //margin: '-50px 0 0 0px'
+                    }
+                    this.langStyle = {
+                        float: 'right',
+                        width: '5%',
+                        margin: '-11% 3% 0 0',
+                        cursor: 'pointer',
+                        //position: 'fixed',
+                        // display: 'block',
+                        // zIndex: '31',
+                        // top: '1.5%',
+                        // right: '-14%',
+                    }
+                }
+            },
+            changeLang(isEn) {
+                webVue.isEn = isEn;
+                this.showLan = false;
+                webVue.defTitle = isEn ? "What's On" : "活动讯息";
+                localStorage.setItem("isEn", isEn);
+            }
+        },
+        created() {
+            this.getData();
+        },
+        mounted() {
+        },
+        beforeUpdate() {
+
+        },
+        updated() {
+        },
+        watch: {},
+        beforeDestroy() {
+        }
+    })
+</script>
